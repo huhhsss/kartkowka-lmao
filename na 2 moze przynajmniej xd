@@ -1,0 +1,112 @@
+ internal class Class1
+    {
+
+
+        public static double[] genciagB(double inp, int n)
+        {
+            double liczba1 = inp;
+
+
+            double[] tablica = new double[n];
+            tablica[0] = liczba1;
+            for (int i = 1; i < n; i++)
+            {
+                tablica[i] = tablica[i - 1] * 6;
+
+            }
+            return tablica;
+
+
+
+        }
+
+        public static void Inf(double[] tablica)
+        {
+            string inf = "CiagB    ";
+
+            foreach (double i in tablica)
+            {
+                inf += $"{i},";
+            }
+
+        Console.WriteLine(inf);
+        }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Serialization;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            double a = double.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            double[] lista = Class1.genciagB(a, b);
+
+            Class1.Inf(lista);
+            Class1.Sumaa(lista);
+
+            Console.ReadKey();
+            
+
+
+
+        }
+    }
+}
